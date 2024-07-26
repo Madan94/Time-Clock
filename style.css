@@ -15,9 +15,9 @@ body{
     justify-content: center;
     align-items:center;
     background:#262626;
-    background-size: cover;
     background-image: linear-gradient(to right, #333 1px, transparent 1px),linear-gradient(to bottom, #333 1px, transparent 1px);
     background-size: 5vh 5vh;
+    max-height:100vh;
 }
 
 
@@ -47,6 +47,11 @@ body{
 }
 
 /* Conatiner Styling */
+
+.container{
+    align-items:center;
+    height:100vh;
+}
 
 .card{
     width:800px;
@@ -207,7 +212,7 @@ p{
         font-family: "Poppins", sans-serif;
         font-weight: 800;
         font-style: normal;
-        font-size:30px;
+        font-size:60px;
         margin:0;
         
     }
@@ -217,7 +222,14 @@ p{
         font-family: "Poppins", sans-serif;
         font-weight: 800;
         font-style: normal;
-        font-size:30px;
+        font-size:60px;
         margin:0;
+    }
+
+    body{
+        max-height:100vh;
+    }
+    .container{
+        max-height:100vh;
     }
 }
