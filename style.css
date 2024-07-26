@@ -10,8 +10,36 @@ body{
     background: #000;
     overflow:hidden;
     box-sizing:border-box;
+    cursor:none;
 }
 
+
+/* Cursor Styling */
+
+.cursor-dot{
+    width:5px;
+    height:5px;
+    background-color:white;
+}
+
+.cursor-outline{
+    width:30px;
+    height:30px;
+    border:2px solid orangered;
+}
+
+.cursor-dot,
+.cursor-outline{
+    position:fixed;
+    top:0;
+    left:0;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    z-index:1;
+    pointer-events: none;
+}
+
+/* Conatiner Styling */
 
 .container{
     display:flex;
@@ -34,6 +62,8 @@ body{
     align-items:center;
 }
 
+
+/* Elements Styling */
 
 
 #heading{
@@ -100,6 +130,16 @@ h3 span::before{
 }
 
 
+p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color:#fff;
+    font-size:20px;
+}
+
+/* Text Animations */
+
 @keyframes displayText{
     0%
     {
@@ -123,7 +163,7 @@ h3 span::before{
 
 }
 
-
+/* Background Animations */
 
 .circle{
     position:absolute;

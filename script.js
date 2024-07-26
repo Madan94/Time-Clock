@@ -2,7 +2,7 @@ let timeEl=document.getElementById("time");
 let dayEl=document.getElementById("day");
 let containerEl=document.getElementById("container");
 
-
+// Time & Date JS Functions
 
 setInterval(function(){
 
@@ -50,6 +50,9 @@ setInterval(function(){
 
 },1000);
 
+
+// Background Animations
+
 function falling(){
     let e =document.createElement("div");
     e.setAttribute('class','circle');
@@ -72,3 +75,25 @@ setTimeout(function(){
 },10000);
 
 
+// Style the Cursor
+
+const cursorDot=document.getElementById("dot");
+const cursorOutline=document.getElementById("outline");
+
+window.onmousemove= function(e) {
+
+    const posX=e.clientX;
+    const posY=e.clientY;
+
+    cursorDot.style.left=`${posX}px`;
+    cursorDot.style.top=`${posY}px`;
+
+    //cursorOutline.style.left=`${posX}px`;
+    //cursorOutline.style.top=`${posY}px`;
+
+    cursorOutline.animate({
+        left:`${posX}px`,
+        top:`${posY}px`
+    },{duration:500,fill:"forwards"});
+    
+}
